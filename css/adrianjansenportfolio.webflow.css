@@ -15,9 +15,9 @@
 }
 
 :root {
-  --primary--background: var(--lightningcss-light, var(--_color---neutral--white)) var(--lightningcss-dark, var(--_color---neutral--black));
+  --_color---neutral--black: #1d1c1a;
   --_typography---paragraph-body--font: var(--_typography---fonts--primary-font);
-  --primary--text: var(--lightningcss-light, var(--_color---neutral--black)) var(--lightningcss-dark, var(--_color---neutral--white));
+  --primary--text: var(--_color---neutral--white);
   --_typography---paragraph-body--font-size: clamp(var(--_typography---paragraph-body--font-size-min-rem) * 1rem, ((var(--_typography---paragraph-body--font-size-min-rem)  - ((var(--_typography---paragraph-body--font-size-max-rem)  - var(--_typography---paragraph-body--font-size-min-rem)) / (var(--_layout---fluid--max)  - var(--_layout---fluid--min)) * var(--_layout---fluid--min))) * 1rem + ((var(--_typography---paragraph-body--font-size-max-rem)  - var(--_typography---paragraph-body--font-size-min-rem)) / (var(--_layout---fluid--max)  - var(--_layout---fluid--min))) * 100vw), var(--_typography---paragraph-body--font-size-max-rem) * 1rem);
   --_typography---paragraph-body--line-height: 1.6;
   --_typography---paragraph-body--font-weight: 400;
@@ -61,7 +61,8 @@
   --_typography---paragraph-body--bottom-margin: 1em;
   --primary--accent: var(--_color---primary--orange);
   --_components---section--padding: clamp(var(--_components---section--padding-min-rem) * 1rem, ((var(--_components---section--padding-min-rem)  - ((var(--_components---section--padding-max-rem)  - var(--_components---section--padding-min-rem)) / (var(--_layout---fluid--max)  - var(--_layout---fluid--min)) * var(--_layout---fluid--min))) * 1rem + ((var(--_components---section--padding-max-rem)  - var(--_components---section--padding-min-rem)) / (var(--_layout---fluid--max)  - var(--_layout---fluid--min))) * 100vw), var(--_components---section--padding-max-rem) * 1rem);
-  --primary--border: var(--lightningcss-light, var(--_color---neutral--mid-gray-1)) var(--lightningcss-dark, var(--_color---neutral--mid-gray-2));
+  --primary--background: var(--_color---neutral--black);
+  --primary--border: var(--_color---neutral--mid-gray-2);
   --_components---container--gutter: 6vw;
   --_components---container--max-width: calc(var(--_layout---fluid--max) * 1rem);
   --_layout---grid--gap-main: 40px;
@@ -97,7 +98,6 @@
   --_components---input-label--font-weight: 500;
   --_components---input-label--letter-spacing: 0em;
   --_color---neutral--dark-gray: #292825;
-  --_color---neutral--black: #1d1c1a;
   --_typography---eyebrow--bottom-margin: 1.5em;
   --_typography---eyebrow--font: var(--_typography---fonts--primary-font);
   --_typography---eyebrow--font-size: clamp(var(--_typography---eyebrow--font-size-min-rem) * 1rem, ((var(--_typography---eyebrow--font-size-min-rem)  - ((var(--_typography---eyebrow--font-size-max-rem)  - var(--_typography---eyebrow--font-size-min-rem)) / (var(--_layout---fluid--max)  - var(--_layout---fluid--min)) * var(--_layout---fluid--min))) * 1rem + ((var(--_typography---eyebrow--font-size-max-rem)  - var(--_typography---eyebrow--font-size-min-rem)) / (var(--_layout---fluid--max)  - var(--_layout---fluid--min))) * 100vw), var(--_typography---eyebrow--font-size-max-rem) * 1rem);
@@ -175,7 +175,7 @@
 }
 
 body {
-  background-color: var(--primary--background);
+  background-color: var(--_color---neutral--black);
   font-family: var(--_typography---paragraph-body--font);
   color: var(--primary--text);
   font-size: var(--_typography---paragraph-body--font-size);
@@ -374,10 +374,10 @@ figcaption {
   padding-bottom: var(--_components---section--padding);
   background-color: var(--primary--background);
   color: var(--primary--text);
-  --primary--background: var(--lightningcss-light, var(--_color---neutral--white)) var(--lightningcss-dark, var(--_color---neutral--black));
-  --primary--text: var(--lightningcss-light, var(--_color---neutral--black)) var(--lightningcss-dark, var(--_color---neutral--white));
+  --primary--text: var(--_color---neutral--white);
   --primary--accent: var(--_color---primary--orange);
-  --primary--border: var(--lightningcss-light, var(--_color---neutral--mid-gray-1)) var(--lightningcss-dark, var(--_color---neutral--mid-gray-2));
+  --primary--background: var(--_color---neutral--black);
+  --primary--border: var(--_color---neutral--mid-gray-2);
   --primary--accent-dark: var(--_color---primary--dark-orange);
   position: relative;
 }
@@ -392,10 +392,10 @@ figcaption {
 }
 
 .section.cc-footer:where(.w-variant-03470b75-1c46-84c5-1d69-d2bb1e4cbe42) {
-  --primary--background: var(--lightningcss-light, var(--_color---neutral--light-gray)) var(--lightningcss-dark, var(--_color---neutral--dark-gray));
-  --primary--text: var(--lightningcss-light, var(--_color---neutral--black)) var(--lightningcss-dark, var(--_color---neutral--white));
+  --primary--text: var(--_color---neutral--white);
   --primary--accent: var(--_color---primary--orange);
-  --primary--border: var(--lightningcss-light, var(--_color---neutral--mid-gray-1)) var(--lightningcss-dark, var(--_color---neutral--mid-gray-2));
+  --primary--background: var(--_color---neutral--dark-gray);
+  --primary--border: var(--_color---neutral--mid-gray-2);
   --primary--accent-dark: var(--_color---primary--dark-orange);
 }
 
@@ -902,16 +902,16 @@ figcaption {
   display: flex;
 }
 
-.page-wrapper {
-  background-color: var(--primary--background);
+.smooth-wrapper {
+  background-color: var(--_color---neutral--dark-gray);
   color: var(--primary--text);
   flex-flow: column;
-  display: flex;
-  position: relative;
+  display: block;
+  position: static;
   overflow: clip;
 }
 
-.page-wrapper.cc-utility {
+.smooth-wrapper.cc-utility {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -919,7 +919,7 @@ figcaption {
   display: flex;
 }
 
-.page-wrapper.u-minh-100vh {
+.smooth-wrapper.u-minh-100vh {
   background-color: var(--_color---neutral--dark-gray);
   padding: 0;
 }
@@ -1630,10 +1630,10 @@ figcaption {
 }
 
 .nav:where(.w-variant-b23b0bfb-3285-ab6f-754f-ce412db82d06) {
-  --primary--background: var(--lightningcss-light, var(--_color---neutral--light-gray)) var(--lightningcss-dark, var(--_color---neutral--dark-gray));
-  --primary--text: var(--lightningcss-light, var(--_color---neutral--black)) var(--lightningcss-dark, var(--_color---neutral--white));
+  --primary--text: var(--_color---neutral--white);
   --primary--accent: var(--_color---primary--orange);
-  --primary--border: var(--lightningcss-light, var(--_color---neutral--mid-gray-1)) var(--lightningcss-dark, var(--_color---neutral--mid-gray-2));
+  --primary--background: var(--_color---neutral--dark-gray);
+  --primary--border: var(--_color---neutral--mid-gray-2);
   --primary--accent-dark: var(--_color---primary--dark-orange);
 }
 
@@ -2782,8 +2782,8 @@ figcaption {
   justify-content: flex-start;
   align-self: flex-start;
   align-items: flex-start;
-  width: 0;
-  height: 0;
+  width: 1px;
+  height: 1px;
   margin-top: -190px;
   margin-bottom: 190px;
   display: block;
@@ -2793,8 +2793,8 @@ figcaption {
   align-self: flex-start;
   width: 0;
   height: 0;
-  margin-top: -188px;
-  margin-bottom: 188px;
+  margin-top: -64px;
+  margin-bottom: 64px;
 }
 
 .testimonial-image-left {
@@ -2916,6 +2916,11 @@ figcaption {
 
 .socials-contacts {
   padding: 0 30px 80px;
+}
+
+.body {
+  background-color: var(--_color---neutral--dark-gray);
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 991px) {
