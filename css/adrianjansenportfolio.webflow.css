@@ -2603,7 +2603,7 @@ figcaption {
 }
 
 .hero-wrapper {
-  flex-flow: column;
+  flex-flow: row;
   justify-content: space-between;
   align-self: stretch;
   align-items: stretch;
@@ -2933,13 +2933,7 @@ figcaption {
   padding: 0 30px 80px;
 }
 
-.portfolio {
-  background-color: var(--_color---neutral--dark-gray);
-  color: var(--_color---neutral--white);
-  padding: 0 30px 20px;
-}
-
-.socials-contacts {
+.portfolio, .socials-contacts {
   background-color: var(--_color---neutral--dark-gray);
   color: var(--_color---neutral--white);
   padding: 0 30px 80px;
@@ -3131,9 +3125,10 @@ figcaption {
 }
 
 .image {
-  align-self: center;
+  align-self: flex-start;
   width: auto;
   max-width: 46.65%;
+  margin-left: 10%;
 }
 
 .paragraph-2 {
